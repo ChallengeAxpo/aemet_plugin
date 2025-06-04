@@ -10,11 +10,19 @@ Async Python client for the AEMET Antarctica API
 - Handles time range splitting, error handling, and flexible configuration
 
 ## Installation
+1- Open a terminal window (in Windows it can be PowerSheell)
+
+2- Type the install command:
 ```bash
 pip install git+https://github.com/ChallengeAxpo/aemet_plugin.git
 ```
+3- After installation, the package should be available in the site-packages directory of your active Python environment. You can verify its location by running `pip show aemet_plugin` and checking the "Location" field.
+
+4- Now, you can import and use the the aemet_plugin package as any other python library.
 
 ## Usage Example
+A simple program example that can be used to test the library:
+
 ```python
 from aemet_plugin import Aemet
 import asyncio
