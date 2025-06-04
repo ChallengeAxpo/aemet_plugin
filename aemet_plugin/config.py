@@ -1,0 +1,1 @@
+BASE_URL_ANCTARTICA = "https://opendata.aemet.es/opendata/api/antartida/datos"
