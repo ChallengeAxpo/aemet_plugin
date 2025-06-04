@@ -8,7 +8,7 @@ class Aemet:
     def __init__(self):
         pass
         
-    async def get_anctartica(self, api_key, dateTime_start, dateTime_end, meteo_station_name, time_aggregation=None):
+    async def get_antartica(self, api_key, dateTime_start, dateTime_end, meteo_station_name, time_aggregation=None):
         """
         Fetches Antarctica weather data from AEMET API. Limits of the API are:
         - Maximum of 40 requests per minute: managed by default in async_api_client.py
@@ -30,7 +30,7 @@ class Aemet:
         intervals = split_timeFrame(dateTime_start, dateTime_end)
 
         # Create the API URLs for each 1-month time interval
-        urls = [f"{BASE_URL_ANCTARTICA}/fechaini/{start_date}/fechafin/{end_date}/estacion/{meteo_station_code}?api_key={api_key}" 
+        urls = [f"{BASE_URL_ANTARTICA}/fechaini/{start_date}/fechafin/{end_date}/estacion/{meteo_station_code}?api_key={api_key}" 
                 for start_date, end_date in intervals]
         
         # Use AsyncClient to fetch data urls from the API via asynchronous requests

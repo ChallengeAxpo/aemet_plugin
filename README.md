@@ -28,7 +28,7 @@ from aemet_plugin import Aemet
 import asyncio
 
 async def main():
-    result = await Aemet().get_anctartica(
+    result = await Aemet().get_antarctica(
         api_key="YOUR_API_KEY",
         dateTime_start="2024-01-01T00:00:00UTC",
         dateTime_end="2024-01-31T23:59:59UTC",
@@ -41,12 +41,13 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-## API
-- `Aemet.get_anctartica(api_key, dateTime_start, dateTime_end, meteo_station_name, time_aggregation=None)`
-    - `api_key`: Your AEMET API key
-    - `dateTime_start`, `dateTime_end`: ISO format strings
-    - `meteo_station_name`: Station name (see utils.py for valid names)
-    - `time_aggregation`: None, 'Hourly', 'Daily', or 'Monthly'
+## Parameters
+
+- **api_key** (`str`): Your AEMET API key.
+- **dateTime_start** (`str`): Start date and time in ISO format (e.g., "2024-01-01T00:00:00UTC").
+- **dateTime_end** (`str`): End date and time in ISO format (e.g., "2024-01-31T23:59:59UTC").
+- **meteo_station_name** (`str`): Name of the meteorological station. Must be "Meteo Station Juan Carlos I" or "Meteo Station Gabriel de Castilla".
+- **time_aggregation** (`str`, optional): Aggregation method. One of `None`, `"Hourly"`, `"Daily"`, or `"Monthly"`.
 
 ## License
 MIT

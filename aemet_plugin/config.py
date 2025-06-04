@@ -1,1 +1,1 @@
-BASE_URL_ANCTARTICA = "https://opendata.aemet.es/opendata/api/antartida/datos"
+BASE_URL_ANTARTICA = "https://opendata.aemet.es/opendata/api/antartida/datos"
